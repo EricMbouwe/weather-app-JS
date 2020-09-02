@@ -1,8 +1,6 @@
-const path = require('path');
-
 module.exports = {
   entry: './src/index.js',
-  
+
   module: {
     rules: [
       {
@@ -15,9 +13,9 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[hash].[ext]',
-            outputPath: 'images'
-          }
-        }
+            outputPath: 'images',
+          },
+        },
       },
     ],
   },
