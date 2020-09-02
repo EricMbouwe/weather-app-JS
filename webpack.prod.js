@@ -26,7 +26,7 @@ module.exports = merge(common, {
       filename: '[name].[contentHash].css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      template: './src/templates/template.html',
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
