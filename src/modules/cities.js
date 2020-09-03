@@ -1,1 +1,1 @@
-export const cites = ['douala', 'yaounde']
+export const cites = ['douala', 'yaounde'];
