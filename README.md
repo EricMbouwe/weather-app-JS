@@ -4,9 +4,9 @@ A weather app that gives for a specific town
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# JavaScript Restaurant Page Tab switching
+# Weather temperature unit switching
 
-> Display content of each tab only using JavaScript.
+> Display content of each unit only using JavaScript.
 
 ![screenshot](.png)
 
@@ -45,8 +45,8 @@ Clone this repo with <code>git clone git@github.com:ericmbouwe/weather-app-js.gi
 
 :bust_in_silhouette: **Eric Mbouwe**
 
-- Github: [ericmbouwe](https://github.com/ericmbouwe)
-- LinkedIn: [Eric Mbouwe](www.linkedin.com/in/ericmbouwe)
+- Github: [ericmbouwe](https://www.github.com/ericmbouwe)
+- LinkedIn: [Eric Mbouwe](https://www.linkedin.com/in/ericmbouwe)
 
 ## 🤝 Contributing
 
