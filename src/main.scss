@@ -8,6 +8,7 @@
   --clr-accent: #faa700;
 }
 
+
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
@@ -30,46 +31,75 @@ p {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
+  border: 1px solid red;
+  padding: 2rem;
 }
 
 .spacing>*+* {
   margin-top: var(--spacer, 2rem)
 }
 
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--clr-text, #fff);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  padding: .5em 1.25em;
-  background: var(--clr-accent, blue);
-  border-radius: .25em;
-  transition:
-    transform 250ms ease-in-out,
-    opacity 250ms linear;
-}
-
-.btn:hover,
-.btn:focus {
-  transform: scale(1.1);
-  opacity: .9;
-}
-
 .hero {
   color: white;
   text-align: center;
-  padding: 15em 0;
   background: #222;
-  min-height: 100vh;
+  height: 100vh;
 
-  @supports (background-blend-mode: multiply) {
-    background: url(./assets/macbook.jpg),
-      radial-gradient(#444, #111);
-    background-blend-mode: multiply;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
+ @supports (background-blend-mode: multiply) {
+   background: url(./assets/macbook.jpg),
+   radial-gradient(#444, #111);
+   background-blend-mode: multiply;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: center center;
+ }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .search-field {
+    padding: .5rem;
+    color: lightcoral;
+    border-radius: .25rem;
+    width: 80%;
+    border: none;
+  }
+
+  .search-btn {
+    color: var(--clr-text, #fff);
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: .5em;
+    background: var(--clr-accent, blue);
+    border-radius: .25em;
+    border: none;
+    transition:
+    transform 250ms ease-in-out,
+    opacity 250ms linear;
+    
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      opacity: .9;
+    }
+  }
+}
+
+.current {
+
+  .temp {
+    margin-top: var(--spacer, 2rem);
+    color: green;
+  }
+}
+
+.location {
+
+  .city {
+    margin-top: var(--spacer, 2rem);
   }
 }

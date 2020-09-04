@@ -6,18 +6,24 @@
   <title>Weather App</title>
 </head>
 <body>
-  <div class="hero spacing">
-    <div class="container">
-      <input type="text" id="searchInput">
-      <input type="submit" value="search" id="searchBtn" class="btn">
-      <div class="weather-content">
-        <p id="cityName"></p>
-        <small id="date">date</small>
-        <h1 id="temperature">23"</h1>
-        <span id="hights">Hights" </span>|
-        <span id="lows"> Lows"</span>
+    <div class="hero">
+      <div class="container">
+        <header class="spacing">
+          <input type="text" autocomplete="off" class="search-field" placeholder="Search for a city..." />
+          <input type="submit" class="search-btn" value="Search" />
+        </header>
+        <main>
+          <section class="location spacing">
+            <div class="city">Douala, CM</div>
+            <div class="date">Thursday 03 August 2020</div>
+          </section>
+          <div class="current spacing">
+            <div class="temp">15<span class="unit">°c</span></div>
+            <div class="weather">Rainy</div>
+            <div class="hi-low">19°c / 26°c</div>
+          </div>
+        </main>
       </div>
     </div>
-  </div>
 </body>
 </html>
