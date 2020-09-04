@@ -31,12 +31,12 @@ p {
   width: 85%;
   max-width: 65em;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid var(--clr-accent);
   padding: 2rem;
 }
 
 .spacing>*+* {
-  margin-top: var(--spacer, 2rem)
+  margin-top: var(--spacer, 1rem)
 }
 
 .hero {
@@ -44,6 +44,9 @@ p {
   text-align: center;
   background: #222;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
  @supports (background-blend-mode: multiply) {
    background: url(./assets/macbook.jpg),
@@ -63,7 +66,7 @@ header {
 
   .search-field {
     padding: .5rem;
-    color: lightcoral;
+    color: var(--clr-accent);
     border-radius: .25rem;
     width: 80%;
     border: none;
@@ -73,7 +76,7 @@ header {
     color: var(--clr-text, #fff);
     font-weight: 700;
     font-size: 1.125rem;
-    padding: .5em;
+    padding: .5em 1.5rem;
     background: var(--clr-accent, blue);
     border-radius: .25em;
     border: none;
@@ -92,14 +95,25 @@ header {
 .current {
 
   .temp {
-    margin-top: var(--spacer, 2rem);
+    margin-top: var(--spacer, 1rem);
     color: green;
+    font-size: clamp(2.5rem, calc(7vw + 2rem), 7rem);
+  }
+
+  .weather {
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 }
 
 .location {
 
   .city {
-    margin-top: var(--spacer, 2rem);
+    margin-top: var(--spacer, 1rem);
+    font-size: clamp(1.5rem, calc(5vw + 1rem), 2.1rem);
+  }
+
+  .date {
+    font-size: .8rem;
   }
 }
