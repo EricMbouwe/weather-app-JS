@@ -1,4 +1,4 @@
-import { cites } from './modules/cities';
-import './main.scss';
+import './main.scss'
+import { getAllData } from './modules/data'
 
-console.log(cites);
+getAllData('douala')
