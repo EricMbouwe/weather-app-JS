@@ -8,7 +8,7 @@ A weather app that gives for a specific town
 
 > Display content of each unit only using JavaScript.
 
-![screenshot](../src/assets/weather-screenshot.png)
+![screenshot](src/assets/weather-screenshot.png)
 
 This app was built with JavaScript, HTML and CSS
 
@@ -19,7 +19,7 @@ This app was built with JavaScript, HTML and CSS
 - Sass
 
 ## Live Demo
-[Live link here]()
+[Live link here](https://rawcdn.githack.com/EricMbouwe/weather-app-JS/bcfb4f2166f7502af4116612d84280d601efbd07/dist/index.html)
 
 
 ## Getting Started
