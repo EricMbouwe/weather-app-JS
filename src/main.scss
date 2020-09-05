@@ -36,7 +36,7 @@ p {
   border: 1px solid var(--clr-accent);
   border-radius: .5rem;
   padding: 1.5rem 1rem;
-  background-color: rgba(68, 68, 68, 0.7);
+  background-color: rgba(68, 68, 68, 0.3);
 
   @media screen and (max-width: 768px) {
     width: 95%;
@@ -57,8 +57,8 @@ p {
   align-items: center;
 
  @supports (background-blend-mode: multiply) {
-   background: url(./assets/macbook.jpg),
-   radial-gradient(#444, #111);
+   background: url(./assets/weather.jpg),
+   radial-gradient(#444, #fff);
    background-blend-mode: multiply;
    background-attachment: fixed;
    background-repeat: no-repeat;
@@ -79,6 +79,11 @@ header {
     width: 100%;
     border: none;
     font-size: 1.2rem;
+    border: .3rem solid var(--clr-accent);
+
+    &:focus {
+      outline: var(--clr-accent);
+    }
   }
 
   .search-btn {
@@ -98,6 +103,7 @@ header {
     &:focus {
       transform: scale(1.05);
       opacity: .9;
+      outline-color: #EAB543;
     }
   }
 }
@@ -108,13 +114,13 @@ header {
   .temp {
     font-family: 'Noto Sans JP', sans-serif;
     margin-top: var(--spacer, 1rem);
-    color: #487eb0;
+    color: #EAB543;
     font-size: clamp(2.5rem, calc(7vw + 2rem), 7rem);
   }
 
   #unit {
     margin-top: var(--spacer, 1rem);
-    color: #487eb0;
+    color: #EAB543;
     font-size: clamp(2rem, calc(5vw + 2rem), 7rem);
     cursor: pointer;
   }
