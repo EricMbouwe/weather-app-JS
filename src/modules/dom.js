@@ -11,16 +11,20 @@ export function populateContent(data) {
   let now = new Date();
   city.innerText = `${data.name}, ${data.sys.country}`;
   date.innerText = dateBuilder(now)
-  temp.innerHTML = `${Math.round(data.main.temp)}`;
-  updateTempUnit()
+  temp.innerText = `${Math.round(data.main.temp)}`;
   weather.innerText = data.weather[0].description;
   hi.innerText = `${Math.round(data.main.temp_max)}`;
   low.innerText = `${Math.round(data.main.temp_min)}`;
 }
 
 
-export function updateTempUnit() {
-  units.forEach(unit => unit.innerText = '°C')
+export function updateTempUnit(unite) {
+  if (unite.innerHTML === '°C') {
+    units.forEach(unit => unit.innerText = '°F')
+  }
+  else if (unite.innerHTML === '°F') {
+    units.forEach(unit => unit.innerText = '°C')
+  }
 }
 
 function dateBuilder(d) {
