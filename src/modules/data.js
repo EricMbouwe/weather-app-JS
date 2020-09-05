@@ -1,6 +1,7 @@
-export const getAllData = async(input) => {
-  const key = '1c3e320d963d88f4616259a84c7026e9'
-  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&APPID=${key}`)
+const key = '1c3e320d963d88f4616259a84c7026e9'
+
+export const getAllData = async (input, units = 'metric') => {
+  const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&units=${units}&APPID=${key}`)
   const data = await res.json()
   return data
 }
@@ -11,7 +12,7 @@ export function convertTemp(data) {
 
 export async function getCurrent(lat, lon, units = 'metric') {
   try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b56e54fcfc83ea96697925d8521b8966&units=${units}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
     const res = await fetch(url, { mode: 'cors' });
     const data = await res.json();
     return data

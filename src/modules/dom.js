@@ -11,7 +11,7 @@ export function populateContent(data) {
   city.innerText = `${data.name}, ${data.sys.country}`;
   date.innerText = dateBuilder(now)
   temp.innerHTML = `${Math.round(data.main.temp)}<span>°c</span>`;
-  weather.innerText = data.weather[0].main;
+  weather.innerText = data.weather[0].description;
   // icon.src = `${../assets/data.weather[0].icon}`.png ;
   hilow.innerText = `${Math.round(data.main.temp_min)}°c / ${Math.round(data.main.temp_max)}°c`;
 }

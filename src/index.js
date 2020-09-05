@@ -19,6 +19,7 @@ function setQuery(evt) {
     getAllData(searchbox.value)
       .then(data => {
         populateContent(data)
+        console.log(data);
       })
   }
 }
