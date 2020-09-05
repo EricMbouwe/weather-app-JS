@@ -8,7 +8,7 @@ A weather app that gives for a specific town
 
 > Display content of each unit only using JavaScript.
 
-![screenshot](.png)
+![screenshot](./src/assets/weather-screenshot.png)
 
 This app was built with JavaScript, HTML and CSS
 
@@ -17,7 +17,6 @@ This app was built with JavaScript, HTML and CSS
 - JavaScript, HTML
 - WebPack
 - Sass
-- Bootstrap
 
 ## Live Demo
 [Live link here]()

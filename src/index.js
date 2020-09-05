@@ -1,6 +1,6 @@
-import './main.scss'
-import { getAllData, toggleTemp, getCurrentLocationTemp } from './modules/data'
-import { updateTempUnit, populateContent, handleSearchError } from './modules/dom'
+import './main.scss';
+import { getAllData, toggleTemp, getCurrentLocationTemp } from './modules/data';
+import { updateTempUnit, populateContent } from './modules/dom';
 
 
 (() => {
@@ -9,47 +9,47 @@ import { updateTempUnit, populateContent, handleSearchError } from './modules/do
     const lon = position.coords.longitude;
     getCurrentLocationTemp(lat, lon)
       .then(data => {
-        populateContent(data)
-      }).catch(e => console.log(e.message))
+        populateContent(data);
+      });
   }
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success);
   }
-})()
+})();
 
 
 const searchbox = document.querySelector('.search-field');
-searchbox.addEventListener('keypress', setQuery);
 
 function setQuery(evt) {
-  if (evt.keyCode == 13 && searchbox.value !== '') {
+  if (evt.keyCode === 13 && searchbox.value !== '') {
     getAllData(searchbox.value)
       .then(data => {
-        populateContent(data)
-      }).catch(e => console.log(e.message))
+        populateContent(data);
+      });
   }
 }
+searchbox.addEventListener('keypress', setQuery);
 
-const searchButton = document.querySelector('.search-btn')
+const searchButton = document.querySelector('.search-btn');
 
 searchButton.addEventListener('click', () => {
   if (searchbox.value !== '') {
     getAllData(searchbox.value)
       .then(data => {
-        populateContent(data)
-      }).catch(e => console.log(e.message))
+        populateContent(data);
+      });
   }
-})
+});
 
 
-let unit = document.getElementById('unit')
+const unit = document.getElementById('unit');
 const city = document.querySelector('.location .city');
 
 unit.addEventListener('click', () => {
   toggleTemp(city.innerHTML, unit)
-  .then(data => {
-    populateContent(data)
-    updateTempUnit(unit)
-  }).catch(e => console.log(e.message))
-})
+    .then(data => {
+      populateContent(data);
+      updateTempUnit(unit);
+    });
+});
