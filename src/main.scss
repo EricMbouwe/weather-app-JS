@@ -92,6 +92,7 @@ header {
     background: var(--clr-accent, blue);
     border-radius: 0.25em;
     border: none;
+    cursor: pointer;
     transition:
       transform 250ms ease-in-out,
       opacity 250ms linear;
