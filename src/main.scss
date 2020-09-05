@@ -112,6 +112,12 @@ header {
     font-size: clamp(2.5rem, calc(7vw + 2rem), 7rem);
   }
 
+  #unit {
+    margin-top: var(--spacer, 1rem);
+    color: #487eb0;
+    font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+  }
+
   .weather {
     font-weight: bold;
     font-size: 1.5rem;
