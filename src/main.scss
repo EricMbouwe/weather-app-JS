@@ -55,6 +55,7 @@ p {
    background-attachment: fixed;
    background-repeat: no-repeat;
    background-position: center center;
+   background-size: cover;
  }
 }
 
@@ -66,10 +67,10 @@ header {
 
   .search-field {
     padding: .5rem;
-    color: var(--clr-accent);
     border-radius: .25rem;
     width: 80%;
     border: none;
+    font-size: 1.2rem;
   }
 
   .search-btn {
