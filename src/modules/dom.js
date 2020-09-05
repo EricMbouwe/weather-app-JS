@@ -12,7 +12,6 @@ export function populateContent(data) {
   city.innerText = `${data.name}, ${data.sys.country}`;
   date.innerText = dateBuilder(now)
   temp.innerHTML = `${Math.round(data.main.temp)}`;
-  // unit.innerText = '°C'
   updateTempUnit()
   weather.innerText = data.weather[0].description;
   hi.innerText = `${Math.round(data.main.temp_max)}`;

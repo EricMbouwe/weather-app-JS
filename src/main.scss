@@ -103,8 +103,10 @@ header {
 }
 
 .current {
+  font-family: 'Kufam', cursive;
 
   .temp {
+    font-family: 'Noto Sans JP', sans-serif;
     margin-top: var(--spacer, 1rem);
     color: #487eb0;
     font-size: clamp(2.5rem, calc(7vw + 2rem), 7rem);

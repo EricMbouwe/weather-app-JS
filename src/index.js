@@ -1,5 +1,5 @@
 import './main.scss'
-import { getAllData, convertTemp, getCurrent } from './modules/data'
+import { getAllData, toggleTemp, getCurrent } from './modules/data'
 import { updateTempUnit, populateContent } from './modules/dom'
 
 const searchbox = document.querySelector('.search-field');
@@ -40,4 +40,12 @@ function setQuery(evt) {
 
 
 const unit = document.querySelector('.unit')
+let city = document.querySelector('.location .city');
 
+unit.addEventListener('click', () => {
+  toggleTemp(city.innerHTML)
+  .then(data => {
+    populateContent(data)
+  })
+  console.log(city.innerHTML);
+})
