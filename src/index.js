@@ -45,8 +45,9 @@ searchButton.addEventListener('click', () => {
 
 const unit = document.getElementById('unit');
 const city = document.querySelector('.location .city');
+const temperature = document.querySelector('.temperature');
 
-unit.addEventListener('click', () => {
+temperature.addEventListener('click', () => {
   toggleTemp(city.innerHTML, unit)
     .then(data => {
       populateContent(data);
