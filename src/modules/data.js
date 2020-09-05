@@ -22,11 +22,8 @@ export const toggleTemp = async (input, unit) => {
 
 
 export async function getCurrentLocationTemp(lat, lon, units = 'metric') {
-  try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
-    const res = await fetch(url, { mode: 'cors' });
-    const data = await res.json();
-    return data;
-  } catch (err) { console.log(err); }
-  return 1;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${units}`;
+  const res = await fetch(url, { mode: 'cors' });
+  const data = await res.json();
+  return data;
 }

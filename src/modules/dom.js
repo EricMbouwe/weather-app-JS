@@ -31,8 +31,8 @@ export function populateContent(data) {
 
 export function updateTempUnit(unite) {
   if (unite.innerHTML === '°C') {
-    units.forEach(unit => { unit.innerText = '°F' });
+    units.forEach(unit => { unit.innerText = '°F'; });
   } else if (unite.innerHTML === '°F') {
-    units.forEach(unit => { unit.innerText = '°C' });
+    units.forEach(unit => { unit.innerText = '°C'; });
   }
 }
