@@ -6,7 +6,7 @@ export const getAllData = async (input, units = 'metric') => {
   return data
 }
 
-export function convertTemp(data) {
+export function convertTemp() {
   console.log('clicked convert');
 }
 

@@ -19,7 +19,6 @@ function setQuery(evt) {
     getAllData(searchbox.value)
       .then(data => {
         populateContent(data)
-        console.log(data);
       })
   }
 }
@@ -41,7 +40,4 @@ function setQuery(evt) {
 
 
 const unit = document.querySelector('.unit')
-unit.addEventListener('click', () => {
-  convertTemp(donnees)
-  updateTempUnit()
-})
+

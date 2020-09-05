@@ -2,22 +2,26 @@ let city = document.querySelector('.location .city');
 let date = document.querySelector('.location .date');
 let temp = document.querySelector('.current .temp');
 let weather = document.querySelector('.current .weather');
-let hilow = document.querySelector('.hi-low');
-let icon = document.querySelector('icon')
+let hi = document.querySelector('.hi');
+let low = document.querySelector('.low');
+let units = document.querySelectorAll('.unit')
 
 
 export function populateContent(data) {
   let now = new Date();
   city.innerText = `${data.name}, ${data.sys.country}`;
   date.innerText = dateBuilder(now)
-  temp.innerHTML = `${Math.round(data.main.temp)}<span>°c</span>`;
+  temp.innerHTML = `${Math.round(data.main.temp)}`;
+  // unit.innerText = '°C'
+  updateTempUnit()
   weather.innerText = data.weather[0].description;
-  // icon.src = `${../assets/data.weather[0].icon}`.png ;
-  hilow.innerText = `${Math.round(data.main.temp_min)}°c / ${Math.round(data.main.temp_max)}°c`;
+  hi.innerText = `${Math.round(data.main.temp_max)}`;
+  low.innerText = `${Math.round(data.main.temp_min)}`;
 }
 
+
 export function updateTempUnit() {
-  console.log('clicked updatedom');
+  units.forEach(unit => unit.innerText = '°C')
 }
 
 function dateBuilder(d) {
