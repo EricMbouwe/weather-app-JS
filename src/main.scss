@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-.hero {
-  --clr-accent: #faa700;
-}
-
-
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
@@ -34,7 +29,7 @@ p {
   max-width: 65em;
   margin: 0 auto;
   border: 1px solid var(--clr-accent);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1.5rem 1rem;
   background-color: rgba(68, 68, 68, 0.3);
 
@@ -43,11 +38,13 @@ p {
   }
 }
 
-.spacing>*+* {
-  margin-top: var(--spacer, 1rem)
+.spacing > * + * {
+  margin-top: var(--spacer, 1rem);
 }
 
 .hero {
+  --clr-accent: #faa700;
+
   color: white;
   text-align: center;
   background: #222;
@@ -56,15 +53,16 @@ p {
   justify-content: center;
   align-items: center;
 
- @supports (background-blend-mode: multiply) {
-   background: url(./assets/weather.jpg),
-   radial-gradient(#444, #fff);
-   background-blend-mode: multiply;
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: center center;
-   background-size: cover;
- }
+  @supports (background-blend-mode: multiply) {
+    background:
+      url(./assets/weather.jpg),
+      radial-gradient(#444, #fff);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 header {
@@ -74,12 +72,11 @@ header {
   align-items: center;
 
   .search-field {
-    padding: .5rem;
-    border-radius: .25rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
     width: 100%;
-    border: none;
     font-size: 1.2rem;
-    border: .3rem solid var(--clr-accent);
+    border: 0.3rem solid var(--clr-accent);
 
     &:focus {
       outline: var(--clr-accent);
@@ -90,20 +87,20 @@ header {
     color: var(--clr-text, #fff);
     font-weight: 700;
     font-size: 1.125rem;
-    padding: .5em 3rem;
+    padding: 0.5em 3rem;
     margin-top: 2rem;
     background: var(--clr-accent, blue);
-    border-radius: .25em;
+    border-radius: 0.25em;
     border: none;
     transition:
-    transform 250ms ease-in-out,
-    opacity 250ms linear;
-    
+      transform 250ms ease-in-out,
+      opacity 250ms linear;
+
     &:hover,
     &:focus {
       transform: scale(1.05);
-      opacity: .9;
-      outline-color: #EAB543;
+      opacity: 0.9;
+      outline-color: #eab543;
     }
   }
 }
@@ -114,14 +111,14 @@ header {
   .temp {
     font-family: 'Noto Sans JP', sans-serif;
     margin-top: var(--spacer, 1rem);
-    color: #EAB543;
-    font-size: clamp(2.5rem, calc(7vw + 2rem), 7rem);
+    color: #eab543;
+    font-size: 5rem;
   }
 
   #unit {
     margin-top: var(--spacer, 1rem);
-    color: #EAB543;
-    font-size: clamp(2rem, calc(5vw + 2rem), 7rem);
+    color: #eab543;
+    font-size: 5rem;
     cursor: pointer;
   }
 
@@ -136,10 +133,10 @@ header {
 
   .city {
     margin-top: var(--spacer, 1rem);
-    font-size: clamp(1.5rem, calc(5vw + 1rem), 2.1rem);
+    font-size: 2.1rem;
   }
 
   .date {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
