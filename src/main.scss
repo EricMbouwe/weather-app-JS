@@ -115,7 +115,8 @@ header {
   #unit {
     margin-top: var(--spacer, 1rem);
     color: #487eb0;
-    font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+    font-size: clamp(2rem, calc(5vw + 2rem), 7rem);
+    cursor: pointer;
   }
 
   .weather {
