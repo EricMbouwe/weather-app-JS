@@ -13,6 +13,11 @@ import { updateTempUnit, populateContent } from './modules/dom';
       });
   }
 
+  getAllData('london')
+    .then(data => {
+      populateContent(data);
+    });
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success);
   }
