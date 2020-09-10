@@ -19,7 +19,7 @@ This app was built with JavaScript, HTML and CSS
 - Sass
 
 ## Live Demo
-[Live link here](https://steph-care.com)
+[Live link here](https://raw.githack.com/EricMbouwe/weather-app-JS/develop/dist/index.html)
 
 
 ## Getting Started
